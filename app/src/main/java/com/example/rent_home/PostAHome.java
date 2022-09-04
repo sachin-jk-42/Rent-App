@@ -72,7 +72,6 @@ public class PostAHome extends AppCompatActivity {
     private Spinner DivisionSpinnerVariable1;
     private Spinner DistrictSpinnerVariable1;
     private Spinner AreaSpinnerVariable1;
-private  String local;
     private ImageButton homeImg;
    // SocialAutoCompleteTextView description;
     private EditText description;
@@ -81,7 +80,7 @@ private  String local;
     private Uri ImageUri ;
 
     String SelectDistrict;
-    String nameHome,contactNo,beds,price,localArea,area;
+    String nameHome,contactNo,beds,price,area;
     String saveCurrentDate, saveCurrentTime,descrip;
     private String randomKey;
     NavigationView sidenav;
@@ -136,39 +135,6 @@ private  String local;
                         Intent intent = new Intent(PostAHome.this, Profile.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
-
-                        break;
-                    case R.id.mypostsSN:
-                        //Toast.makeText(getApplicationContext(), "Myposts will Open", Toast.LENGTH_LONG).show();
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        Intent intent1 = new Intent(PostAHome.this, MyPosts.class);
-                        intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent1);
-
-                        break;
-                    case R.id.notificationSN:
-                        //Toast.makeText(getApplicationContext(), "Notifications will Open", Toast.LENGTH_LONG).show();
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        Intent intent2 = new Intent(PostAHome.this, Notifications.class);
-                        intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent2);
-
-                        break;
-                    case R.id.settingsSN:
-                        //Toast.makeText(getApplicationContext(), "Settings will Open", Toast.LENGTH_LONG).show();
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        Intent intent3 = new Intent(PostAHome.this, Settings.class);
-                        intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent3);
-
-                        break;
-                    case R.id.exitSN:
-                        Toast.makeText(getApplicationContext(), "Exit", Toast.LENGTH_LONG).show();
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        FirebaseAuth.getInstance().signOut();
-
-                        Intent intent7 = new Intent(PostAHome.this, MainActivity.class);
-                        startActivity(intent7);
                         break;
                     case R.id.logoutSN:
                         Toast.makeText(getApplicationContext(), "Logged out", Toast.LENGTH_LONG).show();
@@ -178,14 +144,8 @@ private  String local;
                         Intent intent5 = new Intent(PostAHome.this, Login.class);
                         startActivity(intent5);
                         break;
-                    case R.id.aboutusSN:
-                      //  Toast.makeText(getApplicationContext(), "About Us will Open", Toast.LENGTH_LONG).show();
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        Intent intent4 = new Intent(PostAHome.this, AboutUs.class);
-                        intent4.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent4);
 
-                        break;
+
                 }
                 return true;
             }
@@ -266,13 +226,9 @@ private  String local;
                         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                             if(position==0) {
                                 AreaSpinnerVariable1.setAdapter(DhakaDistrictAreaAdapter);
-                                local = "";
-                                local= AreaSpinnerVariable1.getSelectedItem().toString();
                             }
                             if(position==1) {
                                 AreaSpinnerVariable1.setAdapter(GazipurDistrictAreaAdapter);
-                                local="";
-                                local= AreaSpinnerVariable1.getSelectedItem().toString();
 
                             }
 
@@ -325,7 +281,7 @@ private  String local;
         postDataRef = FirebaseDatabase.getInstance().getReference().child("Rent_posts");
         homeImg= findViewById(R.id.homeImage);
       //  upBtn= findViewById(R.id.upBtn);
-        description= findViewById(R.id.des);
+//        description= findViewById(R.id.des);
       //  cur_user = FirebaseAuth.getInstance().getCurrentUser();
         postBtn = findViewById(R.id.button_post);
       //  details = findViewById(R.id.details);
@@ -333,7 +289,7 @@ private  String local;
         rent = findViewById(R.id.rentRange);
         phoNo = findViewById(R.id.phnNo);
         room = findViewById(R.id.room);
-        tracMap = findViewById(R.id.mapApi);
+//        tracMap = findViewById(R.id.mapApi);
         pd = new ProgressDialog(this);
 
 
@@ -344,13 +300,13 @@ private  String local;
                 openGallery();
             }
         });
-        tracMap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(PostAHome.this, tracLocation.class));
-
-            }
-        });
+//        tracMap.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(PostAHome.this, tracLocation.class));
+//
+//            }
+//        });
 
 
 
@@ -408,10 +364,9 @@ private  String local;
         contactNo= phoNo.getText().toString();
         beds= room.getText().toString();
         price=rent.getText().toString();
-        localArea= local;
 
         // localArea= subArea.getText().toString();
-        descrip= description.getText().toString();
+//        descrip= description.getText().toString();
        // area=SelectDistrict.toString();
 
         if(ImageUri==null){
@@ -507,10 +462,7 @@ private  String local;
         map.put("homeName",nameHome);
         map.put("contactNo", contactNo);
         map.put("room",beds);
-        map.put("localArea",localArea);
         map.put("rentCost",price);
-        map.put("description",descrip);
-
         map.put("Publisher", FirebaseAuth.getInstance().getCurrentUser().getUid());
 
 
@@ -518,7 +470,6 @@ private  String local;
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if(task.isSuccessful()){
-
                     pd.dismiss();
                     Toast.makeText(PostAHome.this, "Posted", Toast.LENGTH_SHORT).show();
                 }
@@ -529,128 +480,5 @@ private  String local;
                 }
             }
         });
-
-
     }
-
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-    private void upload() {
-        pd= new ProgressDialog(this);
-        pd.setMessage("Uploading");
-        pd.show();
-
-        if(image_uri != null){
-            final StorageReference file = FirebaseStorage.getInstance().getReference("Posts").child(System.currentTimeMillis() + "."+ getFileExtension(image_uri));
-            StorageTask uptask= file.putFile(image_uri);
-
-            uptask.continueWithTask(new Continuation() {
-                @Override
-                public Object then(@NonNull Task task) throws Exception {
-                    if(!task.isSuccessful()){
-                        throw task.getException();
-                    }
-                    return file.getDownloadUrl();
-                }
-            }).addOnCompleteListener(new OnCompleteListener() {
-                @Override
-                public void onComplete(@NonNull Task task) {
-                    Uri down_uri= (Uri) task.getResult();
-                    imgUrl= down_uri.toString();
-
-                    DatabaseReference refre= FirebaseDatabase.getInstance().getReference("posts");
-                    String postID = refre.push().getKey();
-
-                    HashMap<String, Object> map= new HashMap<>();
-                    map.put("Post Id",postID);
-                    map.put("Image Url",imgUrl);
-                    map.put("Description",description.getText().toString());
-                    map.put("Punlisher", FirebaseAuth.getInstance().getCurrentUser().getUid());
-
-                    refre.child(postID).setValue(map);
-
-                    DatabaseReference hasHTagRef= FirebaseDatabase.getInstance().getReference().child("HashTags");
-                    List<String> hashtags= description.getHashtags();
-                    if(!hashtags.isEmpty()){
-                        for (String tag: hashtags){
-                            map.clear();
-                            map.put("tag",tag.toLowerCase());
-                            map.put("Post ID", postID);
-                            hasHTagRef.child(tag.toLowerCase()).setValue(map);
-                        }
-                    }
-                    pd.dismiss();
-                    startActivity(new Intent(PostAHome.this, Profile.class));
-                    finish();
-
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    Toast.makeText(PostAHome.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            });
-
-            }
-
-        else {
-            Toast.makeText(this, "Image missing", Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
-    private String getFileExtension(Uri uri) {
-      return MimeTypeMap.getSingleton().getExtensionFromMimeType(this.getContentResolver().getType(uri));
-    }
- */
-   /* @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(Objects.equals(requestCode,CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE) ){
-            CropImage.ActivityResult result= CropImage.getActivityResult(data);
-            image_uri= result.getUri();
-            imaged_added.setImageURI(image_uri);
-            Toast.makeText(this, "hoise", Toast.LENGTH_SHORT).show();
-        }
-        else if( Objects.equals(requestCode,RESULT_OK)){
-            Toast.makeText(this, "hoy nai", Toast.LENGTH_SHORT).show();
-        }
-
-        else
-            {
-                Toast.makeText(this, "Please try again", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(PostAHome.this, Profile.class));
-                finish();
-            }
-    }
-    */
-
-
+}

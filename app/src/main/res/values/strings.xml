@@ -10,122 +10,122 @@
 
     <string-array name="DivisionsString">
 
-        <item>Barishal</item>
-        <item>Chittagong</item>
-        <item>Dhaka</item>
-        <item>Khulna</item>
-        <item>Mymensingh</item>
-        <item>Rangpur</item>
-        <item>Rajshahi</item>
-        <item>Sylhet</item>
+        <item>mangalore</item>
+        <item>bangalore</item>
+        <item>udupi</item>
+        <item>Kolkata</item>
+        <item>jaipur</item>
+        <item>delhi</item>
+        <item>Ranchi</item>
+        <item>sikhar</item>
 
     </string-array>
 
     <string-array name="DhakaDivisionsDistrictsString">
-        <item>Dhaka</item>
-        <item>Gazipur</item>
-        <item>Kishoreganj</item>
-        <item>Manikganj</item>
-        <item>Munshiganj</item>
-        <item>Narayanganj</item>
-        <item>Narsingdi</item>
-        <item>Tangail</item>
-        <item>Faridpur</item>
-        <item>Gopalganj</item>
-        <item>Madaripur</item>
-        <item>Rajbari</item>
-        <item>Shariatpur</item>
+        <item>a</item>
+        <item>c</item>
+        <item>b</item>
+        <item>d</item>
+        <item>e</item>
+        <item>f</item>
+        <item>g</item>
+        <item>h</item>
+        <item>i</item>
+        <item>j</item>
+        <item>r</item>
+        <item>z</item>
+        <item>s</item>
 
     </string-array>
     <string-array name="ChittagongDivisionsDistrictsString">
-        <item>Chittagong</item>
-        <item>CoxsBazar</item>
-        <item>Bandarban</item>
-        <item>Khagrachori</item>
-        <item>Rangamati</item>
-        <item>Lakshmipur</item>
+        <item>a</item>
+        <item>b</item>
+        <item>c</item>
+        <item>d</item>
+        <item>e</item>
+        <item>f</item>
 
     </string-array>
     <string-array name="BarishalDivisionsDistrictsString">
-        <item>Barishal</item>
-        <item>Pirojpur</item>
-        <item>Jhalkathi</item>
-        <item>Patuakhali</item>
+        <item>B</item>
+        <item>P</item>
+        <item>J</item>
+        <item>P</item>
 
     </string-array>
     <string-array name="KhulnaDivisionsDistrictsString">
-        <item>Khulna</item>
-        <item>Shathira</item>
-        <item>Bagerhat</item>
-        <item>Magura</item>
-        <item>Kustia</item>
-        <item>Jhenaiah</item>
+        <item>K</item>
+        <item>S</item>
+        <item>B</item>
+        <item>M</item>
+        <item>s</item>
+        <item>s</item>
 
     </string-array>
     <string-array name="MymensinghDivisionsDistrictsString">
-        <item>Mymensingh</item>
-        <item>Sherpur</item>
-        <item>Kishoreganj</item>
-        <item>Netrokona</item>
-        <item>Jamalpur</item>
-        <item>Tangail</item>
+        <item>a</item>
+        <item>f</item>
+        <item>g</item>
+        <item>e</item>
+        <item>i</item>
+        <item>t</item>
     </string-array>
 
     <string-array name="RangpurDivisionsDistrictsString">
-        <item>Rangpur</item>
-        <item>Dinajpur</item>
-        <item>Gaibandha</item>
-        <item>Kurigram</item>
-        <item>Nilfamari</item>
-        <item>Lalmonirhat</item>
-        <item>Nilphamari</item>
-        <item>Panchagarh</item>
+        <item>fg</item>
+        <item>f</item>
+        <item>h</item>
+        <item>r</item>
+        <item>s</item>
+        <item>i</item>
+        <item>j</item>
+        <item>w</item>
 
     </string-array>
     <string-array name="RajshahiDivisionsDistrictsString">
-        <item>Rajshahi</item>
-        <item>Bogra</item>
-        <item>Joypurhat</item>
-        <item>Naogaon</item>
-        <item>Natore</item>
-        <item>Pabna</item>
-        <item>Sirajganj</item>
-        <item>Chapainawabganj</item>
+        <item>t</item>
+        <item>d</item>
+        <item>d</item>
+        <item>d</item>
+        <item>d</item>
+        <item>i</item>
+        <item>t</item>
+        <item>y</item>
 
     </string-array>
     <string-array name="SylhetDivisionDistrictString">
-        <item>Habiganj</item>
-        <item>Mouluvi Bazar</item>
-        <item>Sunamganj</item>
-        <item>Sylhet</item>
+        <item>e</item>
+        <item>e e</item>
+        <item>e</item>
+        <item>y</item>
     </string-array>
 
     <string-array name="dhakaDisArea">
-        <item>Mirpur</item>
-        <item>Dhanmondi</item>
-        <item>Farmgate</item>
-        <item>Mohammadpur</item>
-        <item>Badda</item>
-        <item>Banani</item>
-        <item>Rampura</item>
-        <item>Khilgaon</item>
+        <item>d</item>
+        <item>e</item>
+        <item>e</item>
+        <item>e</item>
+        <item>e</item>
+        <item>e</item>
+        <item>g</item>
+        <item>a</item>
     </string-array>
 
     <string-array name="gazipurDisArea">
 
-        <item>Kaliakair</item>
-        <item>Sreepur</item>
-        <item>Kaliganj</item>
-        <item>Konabari</item>
+        <item>a</item>
+        <item>b</item>
+        <item>c</item>
+        <item>d</item>
     </string-array>
 
 
     <string-array name="mohammadpurSub">
 
-        <item>Adabar</item>
-        <item>Bosila</item>
-        <item>Zafarbad</item>
-        <item>Sankar</item>
+        <item>a</item>
+        <item>b</item>
+        <item>c</item>
+        <item>d</item>
     </string-array>
 
     <string-array name="Rent">

@@ -18,10 +18,6 @@
         <activity android:name=".HomeDetails" />
         <activity android:name=".SearchResults" />
         <activity android:name=".tracLocation" />
-        <activity android:name=".AboutUs" />
-        <activity android:name=".Settings" />
-        <activity android:name=".Notifications" />
-        <activity android:name=".MyPosts" />
         <activity android:name=".HomePage" />
         <activity android:name=".editProfile" />
         <activity android:name=".PostAHome" />

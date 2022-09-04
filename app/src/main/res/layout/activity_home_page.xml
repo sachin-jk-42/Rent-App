@@ -33,9 +33,11 @@
                 app:title="HOME"
                 app:titleTextColor="#52bea4"
                 android:background="@color/White"/>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <com.google.android.material.bottomnavigation.BottomNavigationView
                     android:id="@+id/bottom_navigation"
                     android:layout_width="match_parent"
@@ -48,6 +50,7 @@
             </RelativeLayout>
         </RelativeLayout>
         <com.google.android.material.navigation.NavigationView
+
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/sidenavmenu"

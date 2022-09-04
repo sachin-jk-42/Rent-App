@@ -25,12 +25,10 @@ public class HomeDetails extends AppCompatActivity {
     private TextView HDhomeName, HDarea, HDrent, HDrooms, HDdescription,HDuserName, HDuserEmail, HDuserContactNo;
     private ImageView HDhomePic;
     private String homeID="";
-    private ImageButton rent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_details);
-        rent=(ImageButton) findViewById(R.id.rent);
 
         homeID=getIntent().getStringExtra("pId");
 
@@ -40,18 +38,7 @@ public class HomeDetails extends AppCompatActivity {
         HDrent=(TextView)findViewById(R.id.HDrent);
         HDrooms=(TextView)findViewById(R.id.HDrooms);
         HDdescription=(TextView)findViewById(R.id.HDdescription);
-
-
         getHomeDetails(homeID);
-
-        rent.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomeDetails.this, confirmRent.class));
-
-            }
-        });
-
     }
 
     private void getHomeDetails(String homeID) {

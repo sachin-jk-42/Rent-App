@@ -86,6 +86,7 @@ public class HomePage extends AppCompatActivity {
                     case R.id.homePage:
                         return true;
 
+
                     case R.id.search:
                         startActivity(new Intent(getApplicationContext(), search.class));
                         overridePendingTransition(0, 0);
@@ -93,7 +94,7 @@ public class HomePage extends AppCompatActivity {
 
                     case R.id.postAHome:
                         startActivity(new Intent(getApplicationContext(), PostAHome.class));
-                        overridePendingTransition(0, 0);
+                        overridePendingTransition(0,0);
                         return true;
 
                 }
@@ -130,38 +131,7 @@ public class HomePage extends AppCompatActivity {
                         startActivity(intent);
 
                         break;
-                    case R.id.mypostsSN:
-                        //Toast.makeText(getApplicationContext(), "Myposts will Open", Toast.LENGTH_LONG).show();
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        Intent intent1 = new Intent(HomePage.this, MyPosts.class);
-                        intent1.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent1);
 
-                        break;
-                    case R.id.notificationSN:
-                        //Toast.makeText(getApplicationContext(), "Notifications will Open", Toast.LENGTH_LONG).show();
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        Intent intent2 = new Intent(HomePage.this, Notifications.class);
-                        intent2.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent2);
-
-                        break;
-                    case R.id.settingsSN:
-                        //Toast.makeText(getApplicationContext(), "Settings will Open", Toast.LENGTH_LONG).show();
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        Intent intent3 = new Intent(HomePage.this, Settings.class);
-                        intent3.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent3);
-
-                        break;
-                    case R.id.exitSN:
-                        Toast.makeText(getApplicationContext(), "Exit", Toast.LENGTH_LONG).show();
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        FirebaseAuth.getInstance().signOut();
-
-                        Intent intent7 = new Intent(HomePage.this, MainActivity.class);
-                        startActivity(intent7);
-                        break;
                     case R.id.logoutSN:
                         Toast.makeText(getApplicationContext(), "Logged out", Toast.LENGTH_LONG).show();
                         drawerLayout.closeDrawer(GravityCompat.START);
@@ -169,14 +139,6 @@ public class HomePage extends AppCompatActivity {
 
                         Intent intent5 = new Intent(HomePage.this, Login.class);
                         startActivity(intent5);
-                        break;
-                    case R.id.aboutusSN:
-                        // Toast.makeText(getApplicationContext(), "About Us will Open", Toast.LENGTH_LONG).show();
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        Intent intent4 = new Intent(HomePage.this, AboutUs.class);
-                        intent4.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                        startActivity(intent4);
-
                         break;
 
                 }

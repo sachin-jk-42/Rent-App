@@ -1,34 +1,33 @@
 {
   "project_info": {
-    "project_number": "227935195257",
-    "firebase_url": "https://rent-home-7a3e6.firebaseio.com",
-    "project_id": "rent-home-7a3e6",
-    "storage_bucket": "rent-home-7a3e6.appspot.com"
+    "project_number": "337914537622",
+    "project_id": "rent-home-740f0",
+    "storage_bucket": "rent-home-740f0.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:227935195257:android:429016d38dce1c9a4504a8",
+        "mobilesdk_app_id": "1:337914537622:android:fe06eb29a138148baac4b7",
         "android_client_info": {
           "package_name": "com.example.rent_home"
         }
       },
       "oauth_client": [
         {
-          "client_id": "227935195257-12n64ip3u17nlt8ig8gerhnaknfnhe4l.apps.googleusercontent.com",
+          "client_id": "337914537622-cth0ane2q91hmlcdshmp0cequju7bbfa.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDRsVKNPwxg5zL2xO3Z0nDgDiic8u3MkQk"
+          "current_key": "AIzaSyD2aEc4HAppBtpunPLgAezU0Y2spVP3MjM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "227935195257-12n64ip3u17nlt8ig8gerhnaknfnhe4l.apps.googleusercontent.com",
+              "client_id": "337914537622-cth0ane2q91hmlcdshmp0cequju7bbfa.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
